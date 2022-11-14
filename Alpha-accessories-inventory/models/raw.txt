@@ -1,0 +1,5 @@
+Alpha car accessories
+
+- We will create models and keep all of them seperately in distinct files
+- Schemas will be created using mongoose 
+
