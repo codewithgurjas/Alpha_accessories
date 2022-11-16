@@ -3,8 +3,27 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const CategorySchema = new Schema({
-  name: { type: String, required: true },
-  subcategory: { type: Boolean, required: true },
+     name:{
+        type:String,
+        required:true,
+        // minLength: 3,
+        // maxLength: 100,
+    },
+    description:{
+        type:String,
+        required:true,
+        // minLength: 3,
+        // maxLength: 100,
+    },
+    // createdAt: {
+    //     type: Date,
+    //     immutable: true,
+    //     default: () => Date.now(),
+    // },
+    // updatedAt: {
+    //     type: Date,
+    //     default: () => Date.now(),
+    // }
 });
 
 // Virtual for book's URL
