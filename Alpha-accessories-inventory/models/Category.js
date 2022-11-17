@@ -15,15 +15,15 @@ const CategorySchema = new Schema({
         // minLength: 3,
         // maxLength: 100,
     },
-    // createdAt: {
-    //     type: Date,
-    //     immutable: true,
-    //     default: () => Date.now(),
-    // },
-    // updatedAt: {
-    //     type: Date,
-    //     default: () => Date.now(),
-    // }
+    createdAt: {
+        type: Date,
+        immutable: true,
+        default: () => Date.now(),
+    },
+    updatedAt: {
+        type: Date,
+        default: () => Date.now(),
+    }
 });
 
 // Virtual for book's URL
