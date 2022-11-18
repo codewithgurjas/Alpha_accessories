@@ -45,19 +45,21 @@ exports.insertCategory = async (req, res) => {
 }
 exports.readCategoryById = async (req, res) => {
     try {
-        let category = await Category.where('_id').equals(req.params.id);
-        res.status(200).send(`associate data with given id : ${category}`)
+        let id = req.params.id;
+        const result = await Category.where({ "_id": id });
+        res.status(200).send(result);
     } catch (e) {
-        res.status(409).send(`id not found ${e.message}`);
+        res.status(404).send(e.massage);
     }
 }
+   
 
 
 exports.readCategory = async (req, res) => {
     try {
-        const category = await Category.find();
+        const category = await Category.find({},{name:1,_id:0});
         //res.status(200).send(category);
-        res.render("categoryGet", { category });
+        res.send(category);
 
     } catch (e) {
         res.status(409).send(e.message);

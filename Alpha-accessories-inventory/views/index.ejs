@@ -1,11 +1,52 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+
+<head>
+  <title>
+    <%= title %>
+  </title>
+  <style>
+    h1 {
+      background-color: black;
+      color: white;
+      text-align: center;
+      height: 50px;
+      width: auto;
+    }
+
+    h3 {
+      margin-top: -23px;
+      background-color: green;
+      color: white;
+      text-align: center;
+      height: 25px;
+    }
+
+    h4 {
+      color: black;
+    }
+
+    .car {
+
+      height: 1000px;
+      background-repeat-x: no-repeat;
+      background-image: url(https://cdn.pixabay.com/photo/2017/04/06/22/11/car-2209439_960_720.png);
+
+
+    }
+  </style>
+  <!-- <link rel="stylesheet" href="public\stylesheets\style.css"> -->
+</head>
+
+<body>
+  <div class="car">
+    <h1 class="blacknav">
+      <%= title %>
+    </h1>
+    <h3>Your final destination to get best car accessories</h3>
+    <h4>We have <%= category_data %> categories</h4>
+    <h4>We have <%= item_data %> items</h4>
+  </div>
+</body>
+
 </html>
