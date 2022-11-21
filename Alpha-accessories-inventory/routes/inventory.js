@@ -1,9 +1,12 @@
 const express = require("express");
 const router = express.Router();
 
-
 const categoryController = require('../controllers/categoryController');
 const itemController = require('../controllers/itemController')
+
+router.get("/insertform",itemController.getform);
+router.post('/insertItem',itemController.post);
+
 
 
 // router.get("/", category_controller.index);
@@ -22,7 +25,7 @@ router.delete("/category/delete/:id", categoryController.deleteCategory);
 router.patch("/category/update/:id", categoryController.updateCategory);
 
 router.get('/Items',itemController.itemList);
-router.post('/insertItem',itemController.post);
+
 router.get('/:id',itemController.itemGetById);
 
 module.exports=router;

@@ -10,6 +10,9 @@ exports.itemList = async (req, res) => {
     res.send(err);
   }
 }
+exports.getform=(req,res)=>{
+  res.render("getform");
+}
 
 exports.post = async (req, res) => {
   try {
@@ -26,7 +29,10 @@ exports.post = async (req, res) => {
       // image: file.filename
       // file.path
     });
-    res.send(data)
+  res.render("itemPost",{
+    data: data,
+    err: err
+  });
   }
   catch (err) {
     res.send(err)
@@ -40,5 +46,17 @@ exports.itemGetById = async (req, res) => {
       res.status(200).send(result);
   } catch (e) {
       res.status(404).send(e.massage);
+  }
+}
+
+exports.getItemsByCategory = async ( req,res) => {
+  try{
+    let id = req.params.id;
+    const result = await Item.where({ "Category": id });
+    res.status(200).send(result);
+
+  }
+  catch(e){
+    res.status(404).send(e.massage);
   }
 }
