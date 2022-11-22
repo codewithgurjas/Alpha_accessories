@@ -6,6 +6,11 @@
     <%= title %>
   </title>
   <style>
+    a {
+    font-weight: bold;
+    float: right;
+    margin-top: 44px;
+    color: #000000d9;}
     h1 {
       background-color: black;
       color: white;
@@ -26,9 +31,13 @@
       color: black;
     }
 
+    .right {
+    text-align-last: right;
+}
+
     .car {
 
-      height: 1000px;
+      height: 646px;
       background-repeat-x: no-repeat;
       background-image: url(https://cdn.pixabay.com/photo/2017/04/06/22/11/car-2209439_960_720.png);
 
@@ -39,19 +48,20 @@
 </head>
 
 <body>
+
   <div class="car">
     <h1 class="blacknav">
       <%= title %>
     </h1>
+    <a href="/inventory/read">Show Categories</a>
     <h3>Your final destination to get best car accessories</h3>
     <h4>We have <%= category_data %> categories</h4>
-    <h4>We have <%= item_data %> items</h4>
+    <h4>We have <%= item_data %> items</h4><div class="right">
+   
+    </div>
   </div>
-  <div>
-    <p>
-      <a href="/">Crete a new item</a>
-    </p>
-  </div>
+  
+  
 </body>
 
 </html>

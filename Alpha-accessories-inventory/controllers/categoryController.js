@@ -58,12 +58,13 @@ exports.readCategoryById = async (req, res) => {
 exports.readCategory = async (req, res) => {
     try {
         const category = await Category.find({},{name:1,_id:0});
-        //res.status(200).send(category);
-        res.send(category);
-
-    } catch (e) {
+       // res.status(200).send(category);
+        res.render("showCategories",{ 
+            category: category 
+            });
+    } 
+    catch (e) {
         res.status(409).send(e.message);
-
     }
 }
 

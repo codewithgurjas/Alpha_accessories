@@ -24,3 +24,5 @@ exports.index = (req, res) => {
       }
     );
   };
+
+  

@@ -19,7 +19,7 @@ router.get('/toupdatecategory', categoryController.updatePage);
 
 router.post('/category/create', categoryController.insertCategory);
 
-router.get('/', categoryController.readCategory);
+router.get('/read', categoryController.readCategory);
 router.get('/category/readById/:id', categoryController.readCategoryById);
 router.delete("/category/delete/:id", categoryController.deleteCategory);
 router.patch("/category/update/:id", categoryController.updateCategory);
