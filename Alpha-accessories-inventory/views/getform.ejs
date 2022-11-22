@@ -10,25 +10,28 @@
     
 
 <h1>Create new item</h1>
-<form method="post" action="">
+<form action="/inventory/insertItem" method="post" >
 <div class="fields">
-    <label> Enter name</label>
+    <label for="itemName"> Enter name</label>
     <input type="text" name="itemName" placeholder="Eg. D23 X Bumper Splitter"> </input>
 </div>
 <div class="fields">
-    <label> Enter description</label>
+    <label for="description"> Enter description</label>
     <input type="text" name="description" placeholder="Eg. It is available in best quality"> </input>
 </div>
 <div class="fields">
-    <label> Enter price</label>
+    <label for="Category"> Enter Category</label>
+    <input type="text" name="Category" placeholder="Eg. Bumper Splitter"> </input>
+</div>
+<div class="fields">
+    <label for="price"> Enter price</label>
     <input type="text" name="price" placeholder="Eg. 30,000"> </input>
 </div>
 <div class="fields">
-    <label> Enter Category</label>
-    <input type="text" name="Category" placeholder="Eg. Bumper Splitter"> </input>
+    <label for="itemsAvailable"> Enter number of items in stock</label>
+    <input type="text" name="itemsAvailable" placeholder="Eg. 30,000"> </input>
 </div>
-
-<button type="submit">submit</button>
+<button type="submit"> submit</button>
 
 </form>
 </body>
