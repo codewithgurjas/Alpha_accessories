@@ -3,13 +3,17 @@ const Item = require('../models/Item')
 
 exports.itemList = async (req, res) => {
   try {
-    const respone = await Item.find({}, { itemName: 1, price: 1, _id: 0 })
-    res.send(respone);
+    const respone = await Item.find({},{ itemName:1,_id:0 })
+    //res.send(respone);
+    res.render("showItems", {
+      response: respone
+    });
   }
   catch (err) {
-    res.send(err);
+    res.status(409).send(e.message);
   }
 }
+
 exports.getform = (req, res) => {
   res.render("getform");
 }
@@ -29,8 +33,8 @@ exports.post = async (req, res) => {
       // image: file.filename
       // file.path
     });
-    
-    res.render("itemPost", {data : data});
+
+    res.render("itemPost", { data: data });
   }
   catch (err) {
     res.send(err)
